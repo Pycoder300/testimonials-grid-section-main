@@ -75,6 +75,6 @@ As soon as the screen size reduces to 600px or below, you will be able to view t
 # View live demo of this project here:
 
 ### What I learned
--grid layout
--providing columns and rows to grid
--using grid with @media query for mobile responsiveness.
+grid layout
+providing columns and rows to grid
+using grid with @media query for mobile responsiveness.
