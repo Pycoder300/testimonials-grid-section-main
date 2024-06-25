@@ -72,7 +72,8 @@ As soon as the screen size reduces to 600px or below, you will be able to view t
 - HTML
 - CSS
 
-# View live demo of this project here:
+# View live demo of this project here: 
+https://pycoder300.github.io/testimonials-grid-section-main/
 
 ### What I learned
 grid layout, 
