@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; display: none;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      font-family: Barlow Semi Condensed;
+      font-size: 13px;
+      background-color: hsl(210, 46%, 95%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 5rem;
+    }
+    .secondary-flex{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .primary-flex{
+      display: flex;
+      gap: 1rem;
+    }
+    .grid-container{
+      height: 700px;
+      width: 1200px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+      "purple purple grey big-white"
+      "little-white black black big-white";
+      gap: 1.5rem;
+    }
+    .purple{
+      grid-area: purple;
+    }
+    .grey{
+      grid-area: grey;
+    }
+    .little-white{
+      grid-area: little-white;
+    }
+    .black{
+      grid-area: black;
+    }
+    .big-white{
+      grid-area: big-white;
+    }
+    .profile{
+      height: 35px;
+      width: 35px;
+      border-radius: 50%;
+    }
+    .grid-element{
+      padding: 2rem;
+    }
+    .header{
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    .paragraph{
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .name{
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .little-white > .header,.big-white > .header{
+      color:hsl(217, 19%, 35%);
+    }
+    .little-white .name,.big-white .name{
+      color: hsl(217, 19%, 35%);
+    }
+    .little-white .role,.big-white .role{
+      color:hsl(217, 19%, 35%);
+      opacity: 50%;
+    }
+    .little-white > .paragraph,.big-white > .paragraph{
+      color:hsl(217, 19%, 35%);
+      opacity: 60%;
+    }
+    .little-white,.big-white{
+      background-color: hsl(0, 0%, 100%);
+      box-shadow: 20px 40px 30px hsl(210, 3%, 85%) ;
+    }
+    .purple{
+      background-color: hsl(263, 55%, 52%);
+      background-image: url(./images/bg-pattern-quotation.svg);
+      background-repeat: no-repeat;
+      background-position-x: 80%;
+      background-position-y: 5%;
+    }
+    .grey{
+      background-color: hsl(217, 19%, 35%);
+    }
+    .black{
+      background-color: hsl(219, 29%, 14%);
+    }
+    .purple > .header,.grey > .header,.black > .header{
+      color: hsl(0, 0%, 100%);
+    }
+    .purple .name,.grey .name,.black .name{
+      color: hsl(0, 0%, 100%);
+    }
+    .purple > .paragraph,.grey > .paragraph,.black > .paragraph{
+      color: hsl(0, 0%, 100%);
+      opacity: 60%;
+    }
+    .purple .role,.grey .role,.black .role{
+      color:hsl(0, 0%, 100%);
+      opacity: 50%;
+    }
+    .grid-element{
+      border-radius: 0.5rem;
+    }
+    .purple .profile{
+      border: 2px solid rgb(206, 147, 255);
+    }
+    .black .profile{
+      border: 2px solid rgb(144, 77, 253);
+    }
+    @media(max-width: 600px){
+      body{
+        padding: 1rem;
+      }
+      .grid-container{
+        width: 350px;
+        grid-template-rows: 2fr 1fr 1fr 1.5fr 2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "purple"
+        "grey"
+        "little-white"
+        "black"
+        "big-white";
+        margin-bottom: 1rem;
+      }
+      .purple{
+        grid-area: purple;
+      }
+      .grey{
+        grid-area: grey;
+      }
+      .little-white{
+        grid-area: little-white;
+      }
+      .black{
+        grid-area: black;
+      }
+      .big-white{
+        grid-area: big-white;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid-element purple">
+      <div class="primary-flex">
+      <img src="./images/image-daniel.jpg" alt="profile picture" class="profile">
+      <div class="secondary-flex">
+        <span class="name">Daniel Clifford </span>
+        <span class="role">Verified Graduate</span>
+      </div>
+    </div>
+      
+  
+
+  <h2 class="header">I received a job offer mid-course, and the subjects I learned were current, if not more so, 
+  in the company I joined. I honestly feel I got every penny’s worth.</h2>
+
+  <p class="paragraph">“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a 
+  transition and have heard some people who had an amazing experience here. I signed up 
+  for the free intro course and found it incredibly fun! I enrolled shortly thereafter. 
+  The next 12 weeks was the best - and most grueling - time of my life. Since completing 
+  the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”</p></div>
+      
+
+    <div class="grid-element grey">
+      <div class="primary-flex">
+      <img src="./images/image-jonathan.jpg" alt="profile picture" class="profile">
+      <div class="secondary-flex">
+        <span class="name">Jonathan Walters </span>
+        <span class="role">Verified Graduate</span>
+      </div>
+    </div>
+      
+  
+
+  <h2 class="header">The team was very supportive and kept me motivated</h2>
+<p class="paragraph">
+“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer 
+for a big company. This was one of the best investments I’ve made in myself. ” </p>
+</div>
+      
+
+    <div class="grid-element little-white">
+      <div class="primary-flex">
+      <img src="./images/image-jeanette.jpg" alt="profile picture" class="profile">
+      <div class="secondary-flex">
+        <span class="name">Jeanette Harmon</span>
+        <span class="role">Verified Graduate</span>
+      </div>
+    </div>
+      
+ 
+
+    <h2 class="header">An overall wonderful and rewarding experience</h2>
+
+    <p class="paragraph">“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living 
+    while doing something I love. ” </p>
+    </div>
+      
+  
+    <div class="grid-element black">
+      <div class="primary-flex">
+      <img src="./images/image-patrick.jpg" alt="profile picture" class="profile">
+      <div class="secondary-flex">
+        <span class="name">Patrick Abrams </span>
+        <span class="role">Verified Graduate</span>
+      </div>
+      </div>
+      
+
+
+      <h2 class="header">Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them and 
+      learning from their experiences was easy.</h2>
+
+      <p class="paragraph">“ The staff seem genuinely concerned about my progress which I find really refreshing. The program 
+      gave me the confidence necessary to be able to go out in the world and present myself as a capable 
+      junior developer. The standard is above the rest. You will get the personal attention you need from 
+      an incredible community of smart and amazing people. ”</p>
+    </div>
+      
+
+    <div class="grid-element big-white">
+      <div class="primary-flex">
+      <img src="./images/image-kira.jpg" alt="profile picture" class="profile">
+      <div class="secondary-flex">
+        <span class="name">Kira Whittle</span>
+        <span class="role">Verified Graduate</span>
+      </div>
+    </div>
+      
+ 
+
+      <h2 class="header">Such a life-changing experience. Highly recommended! </h2>
+
+      <p class="paragraph">“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from 
+      professionals who can help me learn programming step by step. I was encouraged to enroll by a former 
+      student of theirs who can only say wonderful things about the program. The entire curriculum and staff 
+      did not disappoint. They were very hands-on and I never had to wait long for assistance. The agile team 
+      project, in particular, was outstanding. It took my learning to the next level in a way that no tutorial 
+      could ever have. In fact, I’ve often referred to it during interviews as an example of my developent 
+      experience. It certainly helped me land a job as a full-stack developer after receiving multiple offers. 
+      100% recommend! ”
+      </p>
+    </div>
+  </div>
+    
+      
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</body>
+</html>
