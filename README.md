@@ -32,15 +32,15 @@ This is a solution to the [Testimonials grid section challenge on Frontend Mento
   Now for the grid-container, i have given it a display of grid with four columns and two rows having 1fr (fractional unit). The challenging part here was laying out the individual grid elements inside it so that it looks close enough to the final preview image. One way of doing it was by placing the individual containers to their appropriate location with row and column lines. Now this is a bit more tedious so instead of using this method i went with a different approach. For an easier way of laying out the grid elements, i have added a grid-display-area property and provided a layout value inside double quotion using their class names. (*Although you can provide any values you would like to however i would suggest you to keep it simple with appropriate wordings or names ). So this is how it looks like-
 
   .grid-container{
-      height: 700px;
-      width: 1200px;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas:
-      "purple purple grey big-white"
-      "little-white black black big-white";
-      gap: 1.5rem;
+      height: 700px; 
+      width: 1200px; 
+      display: grid; 
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+      grid-template-rows: 1fr 1fr; 
+      grid-template-areas: 
+      "purple purple grey big-white" 
+      "little-white black black big-white"; 
+      gap: 1.5rem; 
     }
 
 For placing the grid element classes to their respective positions i have added grid-area property to their secondary class with the names as the value which was given to the grid-display-area property of the grid container.
@@ -52,10 +52,10 @@ For example:
 For mobile responsiveness i have added a media query having max width of 600px with the following CSS properties inside for the grid container: 
 
 .grid-container{
-        width: 350px;
-        grid-template-rows: 2fr 1fr 1fr 1.5fr 2fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
+        width: 350px; 
+        grid-template-rows: 2fr 1fr 1fr 1.5fr 2fr; 
+        grid-template-columns: 1fr; 
+        grid-template-areas:  
         "purple"
         "grey"
         "little-white"
@@ -75,6 +75,6 @@ As soon as the screen size reduces to 600px or below, you will be able to view t
 # View live demo of this project here:
 
 ### What I learned
-grid layout
-providing columns and rows to grid
+grid layout, 
+providing columns and rows to grid, 
 using grid with @media query for mobile responsiveness.
